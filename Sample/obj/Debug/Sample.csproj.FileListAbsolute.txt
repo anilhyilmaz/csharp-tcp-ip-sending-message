@@ -1,0 +1,12 @@
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\Sample.exe.config
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\Sample.exe
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\Sample.pdb
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\SimpleTCP.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.csprojAssemblyReference.cache
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.frmServer.resources
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.Properties.Resources.resources
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.csproj.GenerateResource.cache
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.csproj.CoreCompileInputs.cache
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.csproj.CopyComplete
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.exe
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.pdb

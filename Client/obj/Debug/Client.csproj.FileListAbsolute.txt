@@ -1,0 +1,11 @@
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\Client.exe.config
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\Client.exe
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\Client.pdb
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\SimpleTCP.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.frmClient.resources
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.exe
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.pdb
