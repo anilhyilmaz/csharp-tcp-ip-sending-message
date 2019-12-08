@@ -10,3 +10,10 @@ C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.csproj.CoreC
 C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.csproj.CopyComplete
 C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.exe
 C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\obj\Debug\Sample.pdb
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\Google.Protobuf.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\MySql.Data.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\Renci.SshNet.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\Google.Protobuf.xml
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\MySql.Data.xml
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Sample\bin\Debug\Renci.SshNet.xml
