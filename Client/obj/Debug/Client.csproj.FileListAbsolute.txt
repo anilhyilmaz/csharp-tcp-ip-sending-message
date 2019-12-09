@@ -9,3 +9,11 @@ C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.csproj.CoreC
 C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.csproj.CopyComplete
 C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.exe
 C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.pdb
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\Google.Protobuf.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\MySql.Data.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\Renci.SshNet.dll
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\Google.Protobuf.xml
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\MySql.Data.xml
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\bin\Debug\Renci.SshNet.xml
+C:\Users\anilhyilmaz\Desktop\datacom\Sample\Client\obj\Debug\Client.csprojAssemblyReference.cache

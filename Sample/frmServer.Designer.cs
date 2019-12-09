@@ -37,6 +37,8 @@
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtserversorugoster = new System.Windows.Forms.TextBox();
+            this.txtsorugoster = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +107,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(547, 42);
+            this.button1.Location = new System.Drawing.Point(572, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -116,17 +118,38 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(569, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(572, 270);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(405, 204);
             this.dataGridView1.TabIndex = 8;
+            // 
+            // txtserversorugoster
+            // 
+            this.txtserversorugoster.Location = new System.Drawing.Point(572, 89);
+            this.txtserversorugoster.Multiline = true;
+            this.txtserversorugoster.Name = "txtserversorugoster";
+            this.txtserversorugoster.Size = new System.Drawing.Size(405, 134);
+            this.txtserversorugoster.TabIndex = 9;
+            // 
+            // txtsorugoster
+            // 
+            this.txtsorugoster.Enabled = false;
+            this.txtsorugoster.Location = new System.Drawing.Point(870, 229);
+            this.txtsorugoster.Name = "txtsorugoster";
+            this.txtsorugoster.Size = new System.Drawing.Size(107, 25);
+            this.txtsorugoster.TabIndex = 10;
+            this.txtsorugoster.Text = "Soru Yayınla";
+            this.txtsorugoster.UseVisualStyleBackColor = true;
+            this.txtsorugoster.Click += new System.EventHandler(this.txtsorugoster_Click);
             // 
             // frmServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 537);
+            this.Controls.Add(this.txtsorugoster);
+            this.Controls.Add(this.txtserversorugoster);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtStatus);
@@ -156,6 +179,8 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtserversorugoster;
+        private System.Windows.Forms.Button txtsorugoster;
     }
 }
 

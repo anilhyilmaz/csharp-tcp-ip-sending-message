@@ -34,5 +34,9 @@ namespace Client
             myMessage = myMessage.Substring(0, myMessage.Length - 1);
             txtStatus.Text += myMessage + Environment.NewLine;
         }
+
+        private void txtsorugoster_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

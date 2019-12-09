@@ -16,7 +16,10 @@ namespace Sample
     public partial class frmServer : Form
     {
         SimpleTCP.SimpleTcpServer server; //create reference to tcp server
-        MySqlConnection baglanti;
+
+        public MySqlConnection mysqlbaglan = new MySqlConnection("Server=localhost;Database=sorular;Uid=root;Pwd='p3rd3_y4t4k_11';" +
+            "AllowUserVariables=True;UseCompression=True");
+
         public frmServer()
         {
             InitializeComponent();
@@ -40,21 +43,6 @@ namespace Sample
             server.Delimiter = 0x13;
             server.StringEncoder = Encoding.UTF8;
             server.DataReceived += Server_DataReceived;
-            string bag;
-            MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder();
-            build.UserID = "root";
-            build.Password = "p3rd3_y4t4k_11";
-            build.Database = "sorular";
-            build.Server = "localhost";
-            build.Server = "localhost";
-
-            bag = build.ToString();
-            baglanti = new MySqlConnection(bag);
-
-            baglanti.Open();
-            MessageBox.Show("baglanti açıldı");
-
-
         }
 
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
@@ -69,26 +57,48 @@ namespace Sample
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            txtStatus.Text += "Server starting...." + Environment.NewLine;
-            System.Net.IPAddress ip = System.Net.IPAddress.Parse(txtHost.Text); //get ip
-            server.Start(ip, Convert.ToInt32(txtPort.Text)); //start servert with ip and port
+            try
+            {
+                mysqlbaglan.Open(); //oluşturtuğumuz tanımı çalıştırarak açılmasını sağlıyoruz
+                txtsorugoster.Enabled = true;
+                if (mysqlbaglan.State != ConnectionState.Closed)
+                {
+                    MessageBox.Show("Veritabani baglantisi basariyla gerceklesti!");
+                }
+                else
+                {
+                    MessageBox.Show("Maalesef baglanti yapilamadi!");
+                }
+                txtStatus.Text += "Server starting...." + Environment.NewLine;
+                System.Net.IPAddress ip = System.Net.IPAddress.Parse(txtHost.Text); //get ip
+                server.Start(ip, Convert.ToInt32(txtPort.Text));
+            } //start servert with ip and port
+            catch (Exception err)
+            {
+                MessageBox.Show("Hata! " + err.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM questions";
-            DataTable dt = new DataTable();
+        }
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand();
-
-            command.CommandText = sql;
-            command.Connection = baglanti;
-            adapter.SelectCommand = command;
-
-            //baglanti.Open();
-            adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
+        private void txtsorugoster_Click(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            int number = r.Next(1, 2);
+            string sqlsoru = "SELECT questions FROM `sorular`.`questions`";
+            MySqlCommand komut = new MySqlCommand(sqlsoru, mysqlbaglan);
+            MySqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
+            {
+                string soru = dr["questions"].ToString();
+                txtserversorugoster.Text = dr["questions"].ToString();
+            }
+            else
+            {
+                txtserversorugoster.Text = "veri cekilemedi";
+            }
         }
     }
 }

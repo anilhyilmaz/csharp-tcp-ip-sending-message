@@ -36,6 +36,8 @@
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtsorugoster = new System.Windows.Forms.Button();
+            this.txtclientsorugoster = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -105,14 +107,34 @@
             this.txtStatus.Location = new System.Drawing.Point(42, 140);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(424, 255);
+            this.txtStatus.Size = new System.Drawing.Size(402, 255);
             this.txtStatus.TabIndex = 12;
+            // 
+            // txtsorugoster
+            // 
+            this.txtsorugoster.Location = new System.Drawing.Point(733, 233);
+            this.txtsorugoster.Name = "txtsorugoster";
+            this.txtsorugoster.Size = new System.Drawing.Size(103, 28);
+            this.txtsorugoster.TabIndex = 14;
+            this.txtsorugoster.Text = "Cevapla";
+            this.txtsorugoster.UseVisualStyleBackColor = true;
+            this.txtsorugoster.Click += new System.EventHandler(this.txtsorugoster_Click);
+            // 
+            // txtclientsorugoster
+            // 
+            this.txtclientsorugoster.Location = new System.Drawing.Point(461, 140);
+            this.txtclientsorugoster.Multiline = true;
+            this.txtclientsorugoster.Name = "txtclientsorugoster";
+            this.txtclientsorugoster.Size = new System.Drawing.Size(375, 87);
+            this.txtclientsorugoster.TabIndex = 13;
             // 
             // frmClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 438);
+            this.ClientSize = new System.Drawing.Size(848, 476);
+            this.Controls.Add(this.txtsorugoster);
+            this.Controls.Add(this.txtclientsorugoster);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
@@ -138,6 +160,8 @@
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Button txtsorugoster;
+        private System.Windows.Forms.TextBox txtclientsorugoster;
     }
 }
 
