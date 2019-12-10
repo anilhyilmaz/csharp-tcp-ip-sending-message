@@ -35,10 +35,11 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.listele = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtserversorugoster = new System.Windows.Forms.TextBox();
             this.txtsorugoster = new System.Windows.Forms.Button();
+            this.lblonlinesayisi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,21 +100,21 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(102, 105);
+            this.txtStatus.Location = new System.Drawing.Point(102, 89);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(424, 255);
+            this.txtStatus.Size = new System.Drawing.Size(424, 256);
             this.txtStatus.TabIndex = 6;
             // 
-            // button1
+            // listele
             // 
-            this.button1.Location = new System.Drawing.Point(572, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "listele";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.listele.Location = new System.Drawing.Point(572, 42);
+            this.listele.Name = "listele";
+            this.listele.Size = new System.Drawing.Size(75, 23);
+            this.listele.TabIndex = 7;
+            this.listele.Text = "listele";
+            this.listele.UseVisualStyleBackColor = true;
+            this.listele.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -143,15 +144,25 @@
             this.txtsorugoster.UseVisualStyleBackColor = true;
             this.txtsorugoster.Click += new System.EventHandler(this.txtsorugoster_Click);
             // 
+            // lblonlinesayisi
+            // 
+            this.lblonlinesayisi.AutoSize = true;
+            this.lblonlinesayisi.Location = new System.Drawing.Point(801, 42);
+            this.lblonlinesayisi.Name = "lblonlinesayisi";
+            this.lblonlinesayisi.Size = new System.Drawing.Size(136, 17);
+            this.lblonlinesayisi.TabIndex = 11;
+            this.lblonlinesayisi.Text = "Baglı kullanici sayisi:";
+            // 
             // frmServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 537);
+            this.Controls.Add(this.lblonlinesayisi);
             this.Controls.Add(this.txtsorugoster);
             this.Controls.Add(this.txtserversorugoster);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listele);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
@@ -177,10 +188,11 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button listele;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtserversorugoster;
         private System.Windows.Forms.Button txtsorugoster;
+        private System.Windows.Forms.Label lblonlinesayisi;
     }
 }
 

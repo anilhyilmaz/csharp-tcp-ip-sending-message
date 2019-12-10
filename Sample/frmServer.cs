@@ -15,7 +15,8 @@ namespace Sample
 {
     public partial class frmServer : Form
     {
-        SimpleTCP.SimpleTcpServer server; //create reference to tcp server
+        SimpleTcpServer server;  //create reference to server
+        System.Net.Sockets.TcpListener myListener;
 
         public MySqlConnection mysqlbaglan = new MySqlConnection("Server=localhost;Database=sorular;Uid=root;Pwd='p3rd3_y4t4k_11';" +
             "AllowUserVariables=True;UseCompression=True");
@@ -39,10 +40,18 @@ namespace Sample
 
         private void frmServer_Load(object sender, EventArgs e)
         {
-            server = new SimpleTCP.SimpleTcpServer(); //create new instance of server
-            server.Delimiter = 0x13;
-            server.StringEncoder = Encoding.UTF8;
+            int online;
+            int PortNo = Convert.ToInt32(txtPort.Text);
+            int HostNo = Convert.ToInt32(txtHost.Text);
+            server = new SimpleTcpServer
+            {
+                Delimiter = 0x13,
+                StringEncoder = Encoding.UTF8
+            }; //create new instance of server
             server.DataReceived += Server_DataReceived;
+            online = server.ConnectedClientsCount;
+            lblonlinesayisi.Text = "Online Sayısı :" + online;
+            myListener = new System.Net.Sockets.TcpListener(PortNo);
         }
 
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
@@ -72,7 +81,7 @@ namespace Sample
                 txtStatus.Text += "Server starting...." + Environment.NewLine;
                 System.Net.IPAddress ip = System.Net.IPAddress.Parse(txtHost.Text); //get ip
                 server.Start(ip, Convert.ToInt32(txtPort.Text));
-            } //start servert with ip and port
+            } //start server with ip and port
             catch (Exception err)
             {
                 MessageBox.Show("Hata! " + err.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
