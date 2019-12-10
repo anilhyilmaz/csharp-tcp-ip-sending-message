@@ -42,7 +42,6 @@ namespace Sample
         {
             int online;
             int PortNo = Convert.ToInt32(txtPort.Text);
-            int HostNo = Convert.ToInt32(txtHost.Text);
             server = new SimpleTcpServer
             {
                 Delimiter = 0x13,
@@ -51,7 +50,6 @@ namespace Sample
             server.DataReceived += Server_DataReceived;
             online = server.ConnectedClientsCount;
             lblonlinesayisi.Text = "Online Sayısı :" + online;
-            myListener = new System.Net.Sockets.TcpListener(PortNo);
         }
 
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
@@ -69,6 +67,7 @@ namespace Sample
             try
             {
                 mysqlbaglan.Open(); //oluşturtuğumuz tanımı çalıştırarak açılmasını sağlıyoruz
+                btnStart.Enabled = false;
                 txtsorugoster.Enabled = true;
                 if (mysqlbaglan.State != ConnectionState.Closed)
                 {

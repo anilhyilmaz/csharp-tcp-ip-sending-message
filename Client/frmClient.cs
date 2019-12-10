@@ -15,6 +15,8 @@ namespace Client
     public partial class frmClient : Form
     {
         SimpleTCP.SimpleTcpClient tcpClient; //create reference to client
+        public MySqlConnection mysqlbaglan = new MySqlConnection("Server=localhost;Database=sorular;Uid=root;Pwd='p3rd3_y4t4k_11';" +
+            "AllowUserVariables=True;UseCompression=True");
         public frmClient()
         {
             InitializeComponent();
@@ -25,6 +27,22 @@ namespace Client
             btnConnect.Enabled = false; //disable button
             tcpClient = new SimpleTCP.SimpleTcpClient().Connect(txtHost.Text, Convert.ToInt32(txtPort.Text));
             btnSend.Enabled = true; //enable send
+
+            Random r = new Random();
+            int number = r.Next(1, 2);
+            string sqlsoru = "SELECT questions FROM `sorular`.`questions`";
+            MySqlCommand komut = new MySqlCommand(sqlsoru, mysqlbaglan);
+            mysqlbaglan.Open();
+            MySqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
+            {
+                string soru = dr["questions"].ToString();
+                txtclientsorugoster.Text = dr["questions"].ToString();
+            }
+            else
+            {
+                txtclientsorugoster.Text = "veri cekilemedi";
+            }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -37,6 +55,20 @@ namespace Client
 
         private void txtsorugoster_Click(object sender, EventArgs e)
         {
+            string cevap = Convert.ToString(txtMessage.Text);
+            string correct_answer = "ankara";
+            int sonuc = string.Compare(cevap, correct_answer);
+            if (sonuc==1)
+            {
+                tcpClient.Disconnect();
+                txtStatus.Text += "Yanlış bildiniz, butonlar kapatılıyor!";
+                btnSend.Enabled = false;
+                txtsorugoster.Enabled = false;
+            }
+            else
+            {
+                txtStatus.Text += "Dogru bildiniz!";
+            }
         }
     }
 }
